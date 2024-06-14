@@ -145,6 +145,7 @@ input[type="text"] {
 
 .search-form__checkbox:checked ~ .search-form__pseudo-checkbox {
   position: relative;
+  z-index: 2;
 }
 
 .search-form__checkbox:checked ~ .search-form__pseudo-checkbox::after {
@@ -154,7 +155,7 @@ input[type="text"] {
   position: absolute;
   inset: 1px;
   background-color: #FFF;
-  z-index: -1;
+  z-index: 1;
 }
 
 .button {
