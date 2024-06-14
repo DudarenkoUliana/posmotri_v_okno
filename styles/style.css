@@ -98,6 +98,7 @@ fieldset {
   gap: 5px;
   align-items: center;
   width: fit-content;
+  cursor: pointer;
 }
 
 .search-form__label:has(:focus-visible) {
@@ -124,8 +125,8 @@ input[type="text"] {
   padding: 1.5px;
   width: 225px;
   appearance: none;
-  cursor: pointer;
   outline: none;
+  cursor: pointer;
 }
 
 .search-form__checkbox-list {
@@ -140,22 +141,16 @@ input[type="text"] {
   height: 19px;
   background-color: transparent;
   border: 1px solid #fff;
-  cursor: pointer;
-}
-
-.search-form__checkbox:checked ~ .search-form__pseudo-checkbox {
-  position: relative;
-  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .search-form__checkbox:checked ~ .search-form__pseudo-checkbox::after {
   content: "";
   width: 15px;
   height: 15px;
-  position: absolute;
-  inset: 1px;
   background-color: #FFF;
-  z-index: 1;
 }
 
 .button {
@@ -201,7 +196,6 @@ input[type="text"] {
   justify-content: space-between;
   align-items: stretch;
   gap: 24px;
-  /*padding-right: 8px;*/
 }
 
 .title {
@@ -222,7 +216,6 @@ input[type="text"] {
   height: 298px;
   overflow: auto;
   position: relative;
-  
 }
 
 .content__list-item:not(:last-child) {
