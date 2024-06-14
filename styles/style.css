@@ -154,6 +154,7 @@ input[type="text"] {
   position: absolute;
   inset: 1px;
   background-color: #FFF;
+  z-index: -1;
 }
 
 .button {
