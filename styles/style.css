@@ -85,11 +85,12 @@ fieldset {
 }
 
 .search-form__fieldset-title {
+  font-family: inherit;
   font-style: normal;
-  font-size: 18px;
+  font-size: inherit;
   font-weight: 400;
   line-height: 22px;
-  color: #FFF;
+  color: inherit;
   padding-bottom: 5px;
 }
 
@@ -116,9 +117,9 @@ input[type="text"] {
   font-style: normal;
   font-weight: 400;
   font-size: inherit;
-  line-height: 22px;
-  color: rgba(255, 255, 255, 0.7);
-  border: 1px solid #FFF;
+  line-height: 22px;  
+  color: inherit;
+  border: 1px solid currentColor;
   border-left: none;
   border-right: none;
   display: inline;
@@ -127,6 +128,10 @@ input[type="text"] {
   appearance: none;
   outline: none;
   cursor: pointer;
+}
+
+input[type="text"]::placeholder {
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .search-form__checkbox-list {
@@ -156,7 +161,7 @@ input[type="text"] {
 .button {
   cursor: pointer;
   background-color: transparent;
-  height: 34px;
+  min-height: 34px;
   font-family: inherit;
   font-style: normal;
   font-weight: 700;
@@ -187,7 +192,7 @@ input[type="text"] {
 
 .more-button {
   width: 100%;
-  margin: 2px;
+  margin: 3px;
 } 
 
 .content__details {
@@ -199,7 +204,7 @@ input[type="text"] {
 }
 
 .title {
-  font-family: 'Oswald';
+  font-family: 'Oswald', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 75px;
@@ -214,8 +219,14 @@ input[type="text"] {
 
 .content__list {
   height: 298px;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
   position: relative;
+  padding-right: 3px;
+}
+
+.content__list-item {
+  padding-right: 4px;
 }
 
 .content__list-item:not(:last-child) {
@@ -227,8 +238,12 @@ input[type="text"] {
   text-decoration: none;
   color: #FFF;
   display: block;
-  margin: 2px;
+  margin: 3px;
   padding: 2px 0;
+}
+
+.content__card-link:focus {
+  outline: none;
 }
 
 .content__card-link:hover {
@@ -268,24 +283,24 @@ input[type="text"] {
 }
 
 .content__video-card-title {
-  font-family: 'Oswald';
+  font-family: 'Oswald', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
   line-height: 100%;
   text-transform: uppercase;
-  color: #FFF;
+  color: inherit;
   margin-bottom: 6px;
   text-overflow: ellipsis;
-  overflow: hidden
+  overflow: hidden;
 }
 
 .content__video-card-description {
-  font-family: 'Fira Sans Condensed';
+  font-family: inherit;
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: inherit;
   line-height: 16px;
-  color: #FFF;
+  color: inherit;
 }
 
