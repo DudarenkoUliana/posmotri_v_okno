@@ -190,6 +190,11 @@ input[type="text"]::placeholder {
   width: 194px;
 }
 
+li:has(button) {
+  display: flex;
+  align-items: self-end;
+}
+
 .more-button {
   width: 100%;
   margin: 3px;
@@ -219,8 +224,7 @@ input[type="text"]::placeholder {
 
 .content__list {
   height: 298px;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow: auto;
   position: relative;
   padding-right: 3px;
 }
